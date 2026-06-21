@@ -27,7 +27,7 @@ jobs:
       - name: Install TeX Live
         run: |
           sudo apt-get update -qq
-          sudo apt-get install -y -qq texlive-latex-base texlive-latex-extra texlive-latex-recommended texlive-fonts-recommended latexmk lmodern
+          sudo apt-get install -y -qq texlive-latex-base texlive-latex-extra texlive-latex-recommended texlive-fonts-recommended texlive-lang-european latexmk lmodern
 
       - name: Build English CV
         run: latexmk -pdf src/cv-en.tex
