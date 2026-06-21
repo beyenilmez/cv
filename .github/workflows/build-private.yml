@@ -19,8 +19,15 @@ jobs:
         env:
           PHONE_NUMBER: ${{ secrets.PHONE_NUMBER }}
         run: |
-          cp src/cv-en.tex /tmp/cv.tex
-          sed -i "s|%PHONE%|\\\\href{tel:${PHONE_NUMBER}}{\\\\underline{${PHONE_NUMBER}}} \$|\$ |" /tmp/cv.tex
+          python3 -c "
+          import os
+          p = os.environ['PHONE_NUMBER']
+          with open('src/cv-en.tex') as f:
+              t = f.read()
+          t = t.replace('%PHONE%', r'\href{tel:' + p + r'}{\underline{' + p + r'}} $|$ ')
+          with open('/tmp/cv.tex', 'w') as f:
+              f.write(t)
+          "
           latexmk -pdf -output-directory=/tmp /tmp/cv.tex
           mkdir -p private-output/en
           mv /tmp/cv.pdf private-output/en/bedirhan_yenilmez_cv.pdf
@@ -29,8 +36,15 @@ jobs:
         env:
           PHONE_NUMBER: ${{ secrets.PHONE_NUMBER }}
         run: |
-          cp src/cv-tr.tex /tmp/cv.tex
-          sed -i "s|%PHONE%|\\\\href{tel:${PHONE_NUMBER}}{\\\\underline{${PHONE_NUMBER}}} \$|\$ |" /tmp/cv.tex
+          python3 -c "
+          import os
+          p = os.environ['PHONE_NUMBER']
+          with open('src/cv-tr.tex') as f:
+              t = f.read()
+          t = t.replace('%PHONE%', r'\href{tel:' + p + r'}{\underline{' + p + r'}} $|$ ')
+          with open('/tmp/cv.tex', 'w') as f:
+              f.write(t)
+          "
           latexmk -pdf -output-directory=/tmp /tmp/cv.tex
           mkdir -p private-output/tr
           mv /tmp/cv.pdf private-output/tr/bedirhan_yenilmez_cv.pdf
