@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
       - name: Install TeX Live
         run: |
@@ -36,7 +36,7 @@ jobs:
           mv /tmp/cv.pdf private-output/tr/bedirhan_yenilmez_cv.pdf
 
       - name: Upload private CVs
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: private-cvs
           path: private-output/
