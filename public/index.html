@@ -19,7 +19,7 @@
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body {
     font-family: "Source Serif 4", "Georgia", serif;
-    background: #FDFCFB;
+    background: radial-gradient(ellipse at 50% 0%, #fdfaf5 0%, #FDFCFB 60%, #f6f2ec 100%);
     color: #000;
     min-height: 100vh;
     display: flex;
@@ -30,6 +30,10 @@
   main {
     background: #FDFCFB;
     border: 2px solid #000;
+    box-shadow:
+      0 1px 2px rgba(0,0,0,0.08),
+      0 4px 8px rgba(0,0,0,0.04),
+      0 8px 24px rgba(0,0,0,0.03);
     padding: 3rem;
     max-width: 520px;
     width: 100%;
@@ -92,6 +96,18 @@
     opacity: 0.5;
   }
   .links a:hover .hint { opacity: 0.8; }
+  .site-link {
+    display: inline-block;
+    margin-top: 2.5rem;
+    font-family: "Geist", system-ui, sans-serif;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: #000;
+    text-decoration: none;
+  }
+  .site-link:hover { text-decoration: underline; text-underline-offset: 4px; }
 </style>
 </head>
 <body>
@@ -111,6 +127,7 @@
       <span class="hint">PDF</span>
     </a>
   </div>
+  <a class="site-link" href="https://bedirhanyenilmez.com" target="_blank" rel="noopener">bedirhanyenilmez.com</a>
 </main>
 </body>
 </html>
