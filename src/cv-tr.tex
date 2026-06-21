@@ -1,0 +1,240 @@
+%-------------------------
+% CV in Latex (Turkish)
+% Author : Bedirhan Yenilmez
+% Based off of: https://www.overleaf.com/latex/templates/jakes-resume/syzfjbzwjncs
+% License : MIT
+%------------------------
+
+\documentclass[a4paper,11pt]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[turkish,shorthands=off]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.65in}
+\addtolength{\textheight}{1.3in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+\setlength{\footskip}{5pt}
+
+% Sections formatting
+\titleformat{\section}{
+  \bfseries\raggedright\large
+}{}{0em}{}[\color{black}\titlerule]
+% Format: \titlespacing*{<command>}{<left>}{<before-sep>}{<after-sep>}
+\titlespacing*{\section}{0pt}{3pt}{4.25pt}
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{#1}
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}
+}
+
+% Control spacing between jobs/projects
+\newcommand{\resumeSubHeadingListStart}{
+    \begin{itemize}[leftmargin=0.15in, label={}, itemsep=1pt, parsep=0pt, topsep=0pt]
+}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+
+% Control spacing between bullet points under a job/project
+\newcommand{\resumeItemListStart}{
+    \begin{itemize}[label={$\vcenter{\hbox{\tiny$\bullet$}}$}, itemsep=0.5pt, parsep=0pt, topsep=0.0pt, partopsep=0pt]
+}
+\newcommand{\resumeItemListEnd}{\end{itemize}}
+
+\linespread{1.0} % Adjusts the spacing between all lines of text
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+\href{https://bedirhanyenilmez.com/}{\textbf{\Huge \scshape Bedirhan Yenilmez}} \\ \vspace{1pt}
+\small
+%PHONE%
+\href{mailto:yenilmezbedirhan@gmail.com}{\underline{yenilmezbedirhan@gmail.com}} $|$
+\href{https://linkedin.com/in/bedirhan-yenilmez}{\underline{linkedin.com/in/bedirhan-yenilmez}} $|$
+\href{https://github.com/beyenilmez}{\underline{github.com/beyenilmez}}
+\end{center}
+
+%-----------SUMMARY-----------
+\section{\smash{Özet}}
+\begin{itemize}[leftmargin=0.15in, label={}]
+  \small{\item{
+    Açık kaynak projelere ve bağımsız geliştirmeye ilgi duyan bir yazılım mühendisi. Kendi projelerimi üretmeyi seviyor; kendi kendime öğrenerek kazandığım bu pratik becerileri ve teknik bilgiyi profesyonel iş hayatımda somut sonuçlara dönüştürmeyi hedefliyorum.
+  }}
+\end{itemize}
+
+%-----------EDUCATION-----------
+\section{\smash{Eğitim}}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Dokuz Eylül Üniversitesi}{İzmir, Türkiye}
+      {Bilgisayar Mühendisliği Lisans}{Eyl 2022 -- Haz 2026}
+       \resumeItemListStart
+        \resumeItem{GNO: 3.8/4.0}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+
+%-----------EXPERIENCE-----------
+\section{Deneyim}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Semafor Teknoloji}{İzmir, Türkiye}
+      {Yazılım Mühendisliği Stajyeri}{Ara 2025 -- Şub 2026}
+      \resumeItemListStart
+        \resumeItem{Saha operasyonlarında otomatik KKD (Kişisel Koruyucu Donanım) uygunluk denetimi için \textbf{YOLOv8} ve \textbf{EasyOCR} kullanarak \textbf{FastAPI} ve \textbf{Gemini LLM} tabanlı bir sesli asistan geliştirdim.}
+        \resumeItem{Akıllı saat için \textbf{Kotlin} ve \textbf{Firebase} kullanarak bir sağlık takip sistemi ve \textbf{Next.js} ile etkileşimli bir kontrol paneli oluşturdum.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {ASELSAN}{Ankara, Türkiye}
+      {Yazılım Mühendisliği Stajyeri}{Ağu 2025 -- Eyl 2025}
+      \resumeItemListStart
+        \resumeItem{Özelleştirilmiş veri dönüştürme katmanları kurarak, \textbf{C++} ile modüler ve çift yönlü \textbf{donanım--ROS 2 iletişim arayüzleri} geliştirdim.}
+        \resumeItem{Test ve hata ayıklama işlemleri için \textbf{ROS 2 araçlarını} (\textbf{ros2cli}, \textbf{Foxglove}, \textbf{Lichtblick}) kullandım.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {HAVELSAN}{Ankara, Türkiye}
+      {Yazılım Mühendisliği Stajyeri}{Tem 2025 -- Ağu 2025}
+      \resumeItemListStart
+        \resumeItem{\textbf{.NET 9}, \textbf{Avalonia UI} ve \textbf{MVVM} mimarisini kullanarak çapraz platform bir masaüstü uygulaması geliştirdim.}
+        \resumeItem{\textbf{Bullseye}, \textbf{Docker} ve \textbf{NSIS} kullanarak derleme ve paketleme süreçlerini otomatikleştirdim.}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+
+%-----------CERTIFICATIONS-----------
+\section{\smash{Sertifikalar}}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {\href{https://drdogrulama.sanayi.gov.tr/tr/verify/07249146037237}{Yapay Zeka Uzmanlık Eğitim Sertifikası}}
+      {Eyl 2025}
+      {T.C. Sanayi ve Teknoloji Bakanlığı}{}
+      \resumeItemListStart
+        \resumeItem{Yapay zeka uygulamaları, veri yönetimi, dağıtık programlama ve algoritmaları kapsayan \textbf{50 oturumluk Yapay Zeka Uzmanlık Eğitim Programı'nı} tamamladım.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {{Savunma Sanayii 401 Sertifikası}}{Şub 2025}
+      {Savunma Sanayii Başkanlığı \& Yükseköğretim Kurulu}{}
+      \resumeItemListStart
+        \resumeItem{\textbf{Savunma Sanayii 401} programını tamamlayarak savunma teknolojileri, sistem mühendisliği, proje yönetimi ve kalite güvencesi alanlarında eğitim aldım.}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+
+%-----------PROJECTS-----------
+\section{\href{https://bedirhanyenilmez.com/tr/\#projects}{\smash{Projeler}}}
+    \resumeSubHeadingListStart
+      \resumeProjectHeading
+          {\textbf{Askeri Kara Araçlarında Yapay Zeka ile Sürücü Yorgunluk Tespiti}}{2026}
+          \resumeItemListStart
+            \resumeItem{SAYZEK-ATP (Savunma Sanayii Yapay Zeka Yetenek Kümelenmesi -- Akademik Tez Programı) ve TÜBİTAK 2209-A destek programlarına kabul edilen bir \textbf{Lisans Bitirme Projesi} olarak geliştirdim.}
+            \resumeItem{Yerel olarak çalışan ve \textbf{0.99}'a varan F1 skoruna ulaşan bir yorgunluk tespit sistemi oluşturdum.}
+          \resumeItemListEnd
+
+      \resumeProjectHeading
+          {\textbf{\href{https://github.com/beyenilmez/autostartstop}{AutoStartStop}}}{2026}
+          \resumeItemListStart
+            \resumeItem{Minecraft proxy alt sunucularını dinamik olarak yönetmek için kural tabanlı bir \textbf{Java} eklentisi geliştirdim. \textbf{JUnit} ve \textbf{Mockito} ile kapsamlı birim ve entegrasyon testleri yazdım.}
+          \resumeItemListEnd
+
+      \resumeProjectHeading
+          {\textbf{\href{https://github.com/beyenilmez/pz-admin}{PZ Admin}}}{2024 -- 2025}
+          \resumeItemListStart
+            \resumeItem{Project Zomboid sunucularının RCON üzerinden yönetilmesi için çapraz platform bir uygulama geliştirdim. \textbf{GitHub Actions} ile derleme süreçlerini otomatikleştirdim.}
+          \resumeItemListEnd
+
+    \resumeSubHeadingListEnd
+
+
+%-----------SKILLS-----------
+\section{\smash{Teknik Beceriler}}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Diller}{: Go, C\#, Java, Python, C/C++, SQL (PostgreSQL), TypeScript/JavaScript} \\
+     \textbf{Frameworkler}{: Avalonia, React, Next.js, Wails} \\
+     \textbf{Araçlar \& Teknolojiler}{: Linux, Git, Docker, Proxmox}
+    }}
+ \end{itemize}
+
+%-----------LANGUAGES-----------
+\section{\smash{Diller}}
+\begin{itemize}[leftmargin=0.15in, label={}]
+  \small{\item{
+    \textbf{Türkçe}{: Ana dil} \\
+    \textbf{English}{: Orta-İleri Düzey (B2)}
+  }}
+\end{itemize}
+
+%-----------TECHNICAL INTERESTS-----------
+\section{\smash{Teknik İlgi Alanları}}
+\begin{itemize}[leftmargin=0.15in, label={}]
+  \small{\item{
+    \vspace{-0.3mm}Ev sunucusu (Homelab) yönetimi ve açık kaynaklı yazılım katkıları
+  }}
+\end{itemize}
+
+%-------------------------------------------
+\end{document}

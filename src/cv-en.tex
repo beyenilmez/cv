@@ -1,0 +1,245 @@
+%-------------------------
+% CV in Latex
+% Author : Bedirhan Yenilmez
+% Based off of: https://www.overleaf.com/latex/templates/jakes-resume/syzfjbzwjncs
+% License : MIT
+%------------------------
+
+\documentclass[a4paper,11pt]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.65in}
+\addtolength{\textheight}{1.3in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+\setlength{\footskip}{5pt}
+
+% Sections formatting
+\titleformat{\section}{
+  \scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule]
+% Format: \titlespacing*{<command>}{<left>}{<before-sep>}{<after-sep>}
+\titlespacing*{\section}{0pt}{3pt}{4.5pt}
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{#1}
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}
+}
+
+% Control spacing between jobs/projects
+\newcommand{\resumeSubHeadingListStart}{
+    \begin{itemize}[leftmargin=0.15in, label={}, itemsep=1pt, parsep=0pt, topsep=0pt]
+}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+
+% Control spacing between bullet points under a job/project
+\newcommand{\resumeItemListStart}{
+    \begin{itemize}[label={$\vcenter{\hbox{\tiny$\bullet$}}$}, itemsep=0.5pt, parsep=0pt, topsep=0.1pt, partopsep=0pt]
+}
+\newcommand{\resumeItemListEnd}{\end{itemize}}
+
+\linespread{1.0} % Adjusts the spacing between all lines of text
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Phone placeholder: replaced by private build workflow
+\newcommand{\phone}{}
+
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+\href{https://bedirhanyenilmez.com/}{\textbf{\Huge \scshape Bedirhan Yenilmez}} \\ \vspace{1pt}
+\small
+%PHONE%
+\href{mailto:yenilmezbedirhan@gmail.com}{\underline{yenilmezbedirhan@gmail.com}} $|$
+\href{https://linkedin.com/in/bedirhan-yenilmez}{\underline{linkedin.com/in/bedirhan-yenilmez}} $|$
+\href{https://github.com/beyenilmez}{\underline{github.com/beyenilmez}}
+\end{center}
+
+%-----------SUMMARY-----------
+\section{Summary}
+\begin{itemize}[leftmargin=0.15in, label={}]
+  \small{\item{
+    Software Engineer with a passion for independent development and open-source projects. I deeply enjoy building things on my own and am equally driven to apply these self-directed learnings, practical skills, and technical insights to deliver high-impact results in my professional career.
+  }}
+\end{itemize}
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Dokuz Eylül University}{Izmir, Turkey}
+      {Bachelor of Computer Engineering}{Sep 2022 -- Jun 2026}
+       \resumeItemListStart
+        \resumeItem{GPA: 3.8/4.0}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Semafor Teknoloji}{Izmir, Turkey}
+      {Software Engineering Intern}{Dec 2025 -- Feb 2026}
+      \resumeItemListStart
+        \resumeItem{Developed a \textbf{FastAPI} \& \textbf{Gemini LLM} voice assistant for field operations, integrating \textbf{YOLOv8} and \textbf{EasyOCR} for automated PPE compliance.}
+        \resumeItem{Built a smartwatch health-tracking system using \textbf{Kotlin} and \textbf{Firebase}, with an interactive \textbf{Next.js} visualization dashboard.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {ASELSAN}{Ankara, Turkey}
+      {Software Engineering Intern}{Aug 2025 -- Sep 2025}
+      \resumeItemListStart
+        \resumeItem{Developed modular, bidirectional \textbf{hardware--ROS~2 communication interfaces} in \textbf{C++} with a custom data conversion pipeline.}
+        \resumeItem{Utilized \textbf{ROS~2 tools} (\textbf{ros2cli}, \textbf{Foxglove}, \textbf{Lichtblick}) for system testing, debugging, and message tracing.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {HAVELSAN}{Ankara, Turkey}
+      {Software Engineering Intern}{Jul 2025 -- Aug 2025}
+      \resumeItemListStart
+        \resumeItem{Developed a cross-platform desktop application using \textbf{.NET 9}, \textbf{Avalonia UI}, and \textbf{MVVM} architecture .}
+        \resumeItem{Automated the build and packaging pipelines using \textbf{Bullseye}, \textbf{Docker}, and \textbf{NSIS}.}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+
+%-----------CERTIFICATIONS-----------
+\section{Certifications}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {\href{https://drdogrulama.sanayi.gov.tr/tr/verify/07249146037237}{Artificial Intelligence Specialization Training Certificate}}
+      {Sep 2025}
+      {Ministry of Industry and Technology}{}
+      \resumeItemListStart
+        \resumeItem{Completed the \textbf{50-session "Artificial Intelligence Specialization Training Program"} covering AI applications, data management, distributed programming, and algorithms.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Defence Industry 401 Certificate}{Feb 2025}
+      {Presidency of Defence Industries \& YÖK}{}
+      \resumeItemListStart
+        \resumeItem{Completed the \textbf{"Defence Industry 401" program}, gaining knowledge in defence technologies, systems engineering, project management, and quality assurance.}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+
+%-----------PROJECTS-----------
+\section{\href{https://bedirhanyenilmez.com/\#projects}{Projects}}
+    \resumeSubHeadingListStart
+      \resumeProjectHeading
+          {\textbf{AI Driver Fatigue Detection in Military Ground Vehicles}}{2026}
+          \resumeItemListStart
+               \resumeItem{Developed as a \textbf{Graduation Project} accepted into SAYZEK-ATP (Defense-Industry AI Academic Thesis Program) and the TÜBİTAK 2209-A support program.}
+               \resumeItem{Built an on-device fatigue-detection pipeline reaching an F1 score of up to \textbf{0.99}.}
+          \resumeItemListEnd
+
+      \resumeProjectHeading
+          {\textbf{\href{https://github.com/beyenilmez/autostartstop}{AutoStartStop}}}{2026}
+          \resumeItemListStart
+               \resumeItem{Developed a \textbf{Java} plugin with a rule-based architecture to dynamically manage Minecraft proxy sub-servers.}
+               \resumeItem{Implemented comprehensive unit testing using \textbf{JUnit} and \textbf{Mockito}.}
+          \resumeItemListEnd
+
+      \resumeProjectHeading
+          {\textbf{\href{https://github.com/beyenilmez/pz-admin}{PZ Admin}}}{2024 -- 2025}
+          \resumeItemListStart
+               \resumeItem{Developed a \textbf{React/Wails} cross-platform app for Project Zomboid server management via RCON.}
+                \resumeItem{Implemented core admin features and automated multi-platform build pipelines via \textbf{GitHub Actions}.}
+          \resumeItemListEnd
+
+    \resumeSubHeadingListEnd
+
+
+%-----------SKILLS-----------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Languages}{: Go, C\#, Java, Python, C/C++, SQL (PostgreSQL), TypeScript/JavaScript} \\
+     \textbf{Frameworks}{: Avalonia, React, Next.js, Wails} \\
+     \textbf{Tools \& Technologies}{: Linux, Git, Docker, Proxmox}
+    }}
+ \end{itemize}
+
+%-----------LANGUAGES-----------
+\section{Languages}
+\begin{itemize}[leftmargin=0.15in, label={}]
+  \small{\item{
+    \textbf{Turkish}{: Native} \\
+    \textbf{English}{: Upper-intermediate (B2)}
+  }}
+\end{itemize}
+
+%-----------TECHNICAL INTERESTS-----------
+\section{Technical Interests}
+\begin{itemize}[leftmargin=0.15in, label={}]
+  \small{\item{
+    Homelab Management and Open Source Software Contributions
+  }}
+\end{itemize}
+
+%-------------------------------------------
+\end{document}
