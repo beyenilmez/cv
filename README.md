@@ -2,12 +2,12 @@
 
 Bilingual CV (English / Turkish) built with LaTeX, deployed via GitHub Actions.
 
-**[beyenilmez.github.io/cv](https://beyenilmez.github.io/cv)**
+**[beyenilmez.github.io/cv](https://cv.bedirhanyenilmez.com)**
 
 | Language | PDF |
 |----------|-----|
-| English | [en/bedirhan_yenilmez_cv.pdf](https://beyenilmez.github.io/cv/en/bedirhan_yenilmez_cv.pdf) |
-| Turkish | [tr/bedirhan_yenilmez_cv.pdf](https://beyenilmez.github.io/cv/tr/bedirhan_yenilmez_cv.pdf) |
+| English | [en/bedirhan_yenilmez_cv.pdf](https://cv.bedirhanyenilmez.com/en/bedirhan_yenilmez_cv.pdf) |
+| Turkish | [tr/bedirhan_yenilmez_cv.pdf](https://cv.bedirhanyenilmez.com/tr/bedirhan_yenilmez_cv.pdf) |
 
 ## Local build
 
