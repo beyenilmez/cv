@@ -2,7 +2,7 @@
 
 Bilingual CV (English / Turkish) built with LaTeX, deployed via GitHub Actions.
 
-**[beyenilmez.github.io/cv](https://cv.bedirhanyenilmez.com)**
+**[cv.bedirhanyenilmez.com](https://cv.bedirhanyenilmez.com)**
 
 | Language | PDF |
 |----------|-----|
